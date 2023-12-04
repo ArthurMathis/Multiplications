@@ -1,8 +1,9 @@
 class Table{
-    constructor(){
-        this.currentTableNumber = 0;
-    }
     constructor(n){
+        this.currentTableNumber = n;
+    }
+
+    changeCurrentTableNumber(n){
         this.currentTableNumber = n;
     }
 
@@ -13,13 +14,13 @@ class Table{
     tableValues(){
         let c = [];
         for(let i = 1; i <= 10; i++){
-            res.push(i * this.tableNumber());
+            c.push(i * this.tableNumber());
         }
         return c;
     }
 
     valuesVerification(values){
-        const c = tableValues();
+        const c = this.tableValues();
         let res = [];
         for(let i = 0; i <= 10; i++){
             res.push(c[i] === values[i] ? true : false);
