@@ -20,13 +20,13 @@ function remove(){
     bVerif.removeEventListener('click', () => { /* à compléter */ });
 }
 
-window.addEventListener("load", init, false);
-window.removeEventListener("unload", remove, false);
+//window.addEventListener("load", init, false);
+//window.removeEventListener("unload", remove, false);
 
-let test = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
-let tableTest = new Table(2);
-let resTest = tableTest.valuesVerification(test);
+function test(){
+    let tab1 = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+    changeTableNumber(2);
+    console.log(valuesVerification(tab1) ? 'résultat juste' : 'résultat faux');
+}
 
-resTest.forEach((c) => {
-    console.log(c);
-});
+test();

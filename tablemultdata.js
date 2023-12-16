@@ -1,30 +1,24 @@
-class Table{
-    constructor(n){
-        this.currentTableNumber = n;
-    }
+let currentTableNumber;
 
-    changeCurrentTableNumber(n){
-        this.currentTableNumber = n;
-    }
+function tableNumberr(){
+    return currentTableNumber;
+}
 
-    tableNumber(){
-        return this.currentTableNumber;
+function tableValues(){
+    let res = [];
+    for(let i = 1; i <= 10; i++){
+        res.push(currentTableNumber * i);
     }
+    return res;
+}
 
-    tableValues(){
-        let c = [];
-        for(let i = 1; i <= 10; i++){
-            c.push(i * this.tableNumber());
-        }
-        return c;
-    }
+function changeTableNumber(i){
+    currentTableNumber = i;
+}
 
-    valuesVerification(values){
-        const c = this.tableValues();
-        let res = [];
-        for(let i = 0; i <= 10; i++){
-            res.push(c[i] === values[i] ? true : false);
-        }
-        return res;
-    }
+function valuesVerification(answers){
+    let correction = tableValues();
+    let i = 0;
+    while(i < correction.length && correction[i] === answers[i]){ i++; }
+    return i === correction.length ? true : false;
 }
