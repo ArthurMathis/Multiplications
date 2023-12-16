@@ -1,6 +1,6 @@
 let currentTableNumber;
 
-function tableNumberr(){
+function tableNumber(){
     return currentTableNumber;
 }
 

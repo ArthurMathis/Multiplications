@@ -1,6 +1,5 @@
 const bResult = document.getElementById('bresult');
 const bVerif = document.getElementById('bverify');
-const select = document.getElementById('selectnum');
 
 function init(){
     let table = new Table(select.value);
