@@ -16,10 +16,10 @@ function selectedTableNumber(){
     return select.value;
 }
     
-function newTable(){
+function onChangeTableNumber(){
     changeTableNumber(selectedTableNumber());
     selectValue(tableNumber());
     writeTableNumber(tableNumber());
 }
     
-select.addEventListener('change', newTable);
+select.addEventListener('change', onChangeTableNumber);

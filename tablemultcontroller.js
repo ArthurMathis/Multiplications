@@ -12,13 +12,19 @@ function remove(){
     //bVerif.removeEventListener('click', () => { /* à compléter */ });
 }
 
-window.addEventListener("load", init);
-//window.removeEventListener("unload", remove, false);
+function newTable(){
+    changeTableNumber(1);
+    selectValue(tableNumber());
+    writeTableNumber(tableNumber());
+}
 
+window.addEventListener("load", init);
+window.removeEventListener("unload", remove, false);
+
+
+// Fonctions de test
 function test(){
     let tab1 = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
     changeTableNumber(2);
     console.log(valuesVerification(tab1) ? 'résultat juste' : 'résultat faux');
 }
-
-test();
