@@ -2,24 +2,17 @@ const bResult = document.getElementById('bresult');
 const bVerif = document.getElementById('bverify');
 
 function init(){
-    let table = new Table(select.value);
-
-    select.addEventListener('change', update, false);
-    bResult.addEventListener('click', () => { /* à compléter */ });
-    bVerif.addEventListener('click', () => { /* à compléter */ });
-}
-
-function update(){
-    const n = select.value;
-    table.changeCurrentTableNumber(n);
+    newTable();
+    //bResult.addEventListener('click', () => { /* à compléter */ });
+    //bVerif.addEventListener('click', () => { /* à compléter */ });
 }
 
 function remove(){
-    bResult.removeEventListener('click', () => { /* à compléter */ });
-    bVerif.removeEventListener('click', () => { /* à compléter */ });
+    //bResult.removeEventListener('click', () => { /* à compléter */ });
+    //bVerif.removeEventListener('click', () => { /* à compléter */ });
 }
 
-//window.addEventListener("load", init, false);
+window.addEventListener("load", init);
 //window.removeEventListener("unload", remove, false);
 
 function test(){
