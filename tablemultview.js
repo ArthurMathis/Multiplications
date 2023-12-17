@@ -30,5 +30,10 @@ function displayResults(results){
         i++;
     });
 }
+function eraseResults(){
+    inputs.forEach(element => {
+        element.value = null;
+    });
+}
     
 select.addEventListener('change', onChangeTableNumber);

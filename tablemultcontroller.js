@@ -12,6 +12,10 @@ function remove(){
     //bVerif.removeEventListener('click', () => { /* à compléter */ });
 }
 
+bResult.addEventListener('click', () => {
+    displayResults(tableValues());
+})
+
 function newTable(){
     changeTableNumber(1);
     selectValue(tableNumber());
