@@ -1,5 +1,6 @@
 let table = document.querySelectorAll('.num');
 const inputs = document.querySelectorAll('input.result');
+let messageBox = document.getElementById('resultmsg');
 
 function writeTableNumber(num){
     table.forEach(element => {
@@ -29,11 +30,16 @@ function displayResults(results){
         element.value = results[i];
         i++;
     });
+    displayMessage('Apprenez bien ces valeurs');
 }
 function eraseResults(){
     inputs.forEach(element => {
         element.value = null;
     });
+}
+
+function displayMessage(msg){
+    messageBox.innerHTML = msg;
 }
     
 select.addEventListener('change', onChangeTableNumber);
